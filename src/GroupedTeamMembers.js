@@ -20,15 +20,19 @@ const GroupedTeamMembers =({employees,selectedTeam,setTeam}) =>{
         var teamDMembers = employees.filter((employee) => employee.teamName==='TeamD');
         var teamD = {team:'TeamD', members:teamDMembers, collapsed: selectedTeam==='TeamD'?false:true}
         teams.push(teamD);
+
+        return teams;
+        
     }
 
     function handleTeamClick(event){
-        var transformedGroupData = groupedEmployees.map((groupedData)=>groupedData.team ===event.currentTarget.id?{...groupedData,collapse:!groupedData.collapse}:groupedData);
+        var transformedGroupData = groupedEmployees.map((groupedData)=>groupedData.team ===event.currentTarget.id?{...groupedData,collapsed:!groupedData.collapsed}:groupedData);
         setGroupedData(transformedGroupData)
         setTeam(event.currentTarget.id)
     }
 
     return(
+        
         <main className="container">
            {
                 groupedEmployees.map((item)=> {
