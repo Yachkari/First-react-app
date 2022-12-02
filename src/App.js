@@ -145,7 +145,7 @@ useEffect(() =>{
       <Header selectedTeam={selectedTeam}teamMemberCount={employees.filter((employee) =>employee.teamName===selectedTeam).length}/>
 
       <Routes>
-        <Route path="/" element={<Employees employees={employees} selectedTeam={selectedTeam}handleEmployeeCardClick={handleEmployeeCardClick}
+        <Route path="/teamAllocation" element={<Employees employees={employees} selectedTeam={selectedTeam}handleEmployeeCardClick={handleEmployeeCardClick}
         handleTeamSelectionChange={handleTeamSelectionChange}/>}>
         </Route>
         <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers employees={employees} selectedTeam={selectedTeam} setTeam={setTeam}/>}>
