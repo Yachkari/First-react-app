@@ -51,7 +51,7 @@ const GroupedTeamMembers =({employees,selectedTeam,setTeam}) =>{
                                                     <span className="text-dark">Full Name : {member.fullName}</span>
                                                 </h5>
                                                 <p>
-                                                    Designation: {member.designation}
+                                                    Designation : {member.designation}
                                                 </p>
                                             </div>
                                         )
